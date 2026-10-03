@@ -229,3 +229,22 @@
   }
 
 }
+
+/* Mobile: show only social media links in the top bar */
+@media screen and (max-width: 767px) {
+  /* Hide announcement, approval, accreditation and contact details */
+  .topbar a:not(.social-links a),
+  .topbar .contact-info,
+  .topbar .top-links {
+    display: none;
+  }
+
+  /* Keep social media links visible */
+  .topbar .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+}
